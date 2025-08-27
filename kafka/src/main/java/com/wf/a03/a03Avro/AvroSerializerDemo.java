@@ -15,7 +15,7 @@ public class AvroSerializerDemo {
     private static void sendMsessage() {
         Properties props = new Properties();
         props.put("bootstrap.servers", "127.0.0.1:9092");
-        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
+        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer"); // KafkaAvroSerializer
         props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer"); // 使用 KafkaAvroSerializer 来序列化对象 ,注意 KafkaAvroSerializer 也可以处理原始类型 包括String
         props.put("schema.registry.url", "schemaUrl"); //  生产者要传给序列化器的参数，其指向模式的存储位置
 
